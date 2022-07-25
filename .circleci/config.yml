@@ -10,6 +10,9 @@ jobs:
     work_directory: ~/udagram/udagram-frontend
     executer: node/default
     steps:
+    docker:
+      # the base image can run most needed actions with orbs
+      - image: "cimg/node:16.13.2"    
       # install node and checkout code
       - node/install:
           node-version: '16.13.2'         
