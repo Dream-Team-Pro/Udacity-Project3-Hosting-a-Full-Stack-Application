@@ -61,7 +61,7 @@ Provision the necessary AWS services needed for running the application:
 - In AWS, S3 bucket: `udacity-app-udagram` 
 - In AWS, elasticbeanstalk Application name: `udagram-cli`
 - In AWS, elasticbeanstalk Environment name: `Udagramcli-env`
-- In AWS, elasticbeanstalk Application URL: `Udagramcli-env.eba-amvaekh3.us-east-1.elasticbeanstalk.com` 
+- In AWS, elasticbeanstalk Application URL: `http://udagramcli-env.eba-k6depxex.us-east-1.elasticbeanstalk.com/` 
 - In S3 Bucket website endpoint: `http://udacity-app-udagram.s3-website-us-east-1.amazonaws.com/`
 - In AWS, Create IAM Group & user  with permission and credintioans to create and deploy project to Elastik Beanstalk successfully
 
