@@ -43,7 +43,7 @@ this project called: a Project3-Hosting-a-Full-Stack-Application.
 [License](LICENSE.txt)
 
 ```
-### Project Setup
+### Project run & Deploy
 
 - clone project: `git clone https://github.com/Dream-Team-Pro/Udacity-Project3-Hosting-a-Full-Stack-Application.git`
 - Go to project root: `cd udagram`
@@ -68,6 +68,7 @@ Provision the necessary AWS services needed for running the application:
 - In S3 Bucket website endpoint: `http://udacity-app-udagram.s3-website-us-east-1.amazonaws.com/`
 - In AWS, Create IAM Group & user  with permission and credintioans to create and deploy project to Elastik Beanstalk successfully
 
+```
 ### Environment Variables
 
 POSTGRES_HOST       =   <Database_IP_Address>
@@ -84,24 +85,7 @@ JWT_SECRET          =   <Any_Secret>
 EB_APP              =   <Application_Name>
 EB_ENV              =   <Application_Environment>
 
-
-## Documentation
-
-### Detailed Documentation is Project Root contains: 
-1- Architecture Diagrams Folder contains:
-    - AWS Architecture Diagram.png
-    - pipieline circleci.png
-2- Screenshots Folder Contains:
-    - Amazon RDS Database Configuration.png
-    - Amazon RDS Database Endpoint.png
-    - Amazon S3 Bucket.png 
-    - Circleci Environment Variables.png
-    - circleci_project-build.png
-    - circleci-project-setup-Success.png
-    - Elastic Beanstalk Health OK.png
-3- App dependencies.md  
-4- Infrastructure description.md 
-5- Pipeline process.md 
+```
 
 ## Testing
 
@@ -112,6 +96,7 @@ This project contains two different test suite: unit tests and End-To-End tests(
 - Run: `npm run test`
 - Run: `npm run e2e`
 
+```
 
 There are no Unit test on the back-end
 
