@@ -8,55 +8,53 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
 jobs:
-  build-and-deploy:
-    docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:16.13.2"
-    steps:
-      # install node and checkout code
-      - node/install:
-          node-version: '16.13.2'         
-      - checkout
-      - aws-cli/setup
-      - eb/setup
+    build-and-deploy:
+        docker:
+        - image: 'cimg/base:stable'
+        steps:
+        - node/install:
+            node-version: '16.13.2' 
+        - checkout
+        - aws-cli/setup
+        - eb/setup
     Frontend:
-      # Use root level package.json to install dependencies in the frontend app
-      - run:
-          name: Install Front-End Dependencies
-          command: npm run frontend:install
-      # TODO: Lint the frontend
-      - run:
-          name: Front-End Lint
-          command: npm run frontend:lint
-      # TODO: Build the frontend app
-      - run:
-          name: Front-End Build
-          command: npm run frontend:build
-      # TODO: Start the frontend app
-      - run:
-          name: Front-End Start
-          command: npm run frontend:start
-      # TODO: Deploy the frontend app
-      - run:
-          name: Front-End Deploy
-          command: npm run frontend:deploy
+        # Use root level package.json to install dependencies in the frontend app
+        - run:
+            name: Install Front-End Dependencies
+            command: npm run frontend:install
+        # TODO: Lint the frontend
+        - run:
+            name: Front-End Lint
+            command: npm run frontend:lint
+        # TODO: Build the frontend app
+        - run:
+            name: Front-End Build
+            command: npm run frontend:build
+        # TODO: Start the frontend app
+        - run:
+            name: Front-End Start
+            command: npm run frontend:start
+        # TODO: Deploy the frontend app
+        - run:
+            name: Front-End Deploy
+            command: npm run frontend:deploy
     Backend:
-      # TODO: Install dependencies in the the backend API          
-      - run:
-          name: Install backend Dependencies
-          command: npm run backend:install
-      # TODO: Build the backend API      
-      - run:
-          name: backend Build
-          command: npm run backend:build
-      # TODO: Start the backend API      
-      - run:
-          name: backend Start
-          command: npm run backend:start
-      # TODO: Deploy the backend API      
-      - run:
-          name: backend Deploy
-          command: npm run backend:deploy
+        # TODO: Install dependencies in the the backend API          
+        - run:
+            name: Install backend Dependencies
+            command: npm run backend:install
+        # TODO: Build the backend API      
+        - run:
+            name: backend Build
+            command: npm run backend:build
+        # TODO: Start the backend API      
+        - run:
+            name: backend Start
+            command: npm run backend:start
+        # TODO: Deploy the backend API      
+        - run:
+            name: backend Deploy
+            command: npm run backend:deploy
 workflows:
  build_and_deploy:
     jobs:
