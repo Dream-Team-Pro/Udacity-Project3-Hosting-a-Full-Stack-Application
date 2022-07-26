@@ -56,10 +56,11 @@ jobs:
           name: backend Build
           command: npm run backend:deploy
 workflows:
- build-and-deploy:
+  build-and-deploy:
     jobs:
-      - setup
-filters:
-    branches:
-      only:
-      - main
+      - build-and-deploy:
+          context: aws
+          filters:
+            branches:
+              only:
+                - main      
